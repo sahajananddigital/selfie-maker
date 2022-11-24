@@ -52,8 +52,9 @@ function mergeSelfie(imgURL, textInput){
   aTag.download = "mobile.png";
 
   mergeImages([
+    { src: 'white.png', x: 1000, y: 2000 },
+    { src: imgURL, x:1100, y: 2100 },
     { src: 'bg.png', x: 0, y: 0 },
-    { src: imgURL, x:1200, y: 2150 },
   ], {nameText: textInput}).then(b64 => imageSrc = b64).then( b64 => {
     aTag.href = imageSrc;
     return b64;

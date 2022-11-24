@@ -78,7 +78,7 @@
 						});
 					}
 
-					ctx.font = "70px baloo";
+					ctx.font = "100px baloo";
 					// ctx.fillStyle = "white";
 					var textString = options.nameText,
 					textWidth = ctx.measureText(textString).width;
