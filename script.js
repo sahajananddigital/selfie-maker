@@ -42,32 +42,32 @@ jQuery(document).ready(function(){
 // import mergeImages from 'merge-images';
 
 function mergeSelfie(imgURL, textInput){
-  var imgEl = document.createElement('img');
-  // imgEl.src = ($(imgInput).val())
-  $('form').append(imgEl)
+  // var imgEl = document.createElement('img');
+  // // imgEl.src = ($(imgInput).val())
+  // $('form').append(imgEl)
 
   var imageSrc = '';
   var aTag = document.createElement('a');
   $('form').append(aTag);
   aTag.download = "mobile.png";
 
-  // mergeImages([
-  //   { src: 'bg.png', x: 0, y: 0 },
-  //   { src: imgURL, x: 280, y: 450 },
-  // ], {nameText: textInput}).then(b64 => imageSrc = b64).then( b64 => {
-  //   aTag.href = imageSrc;
-  //   return b64;
-  // } ).then( b64 => {
-  //   aTag.click();
-  //   aTag.remove();  
-  // } );
-
   mergeImages([
     { src: 'bg.png', x: 0, y: 0 },
-    { src: imgURL, x: 1200, y: 2150 },
+    { src: imgURL, x: 280, y: 450 },
   ], {nameText: textInput}).then(b64 => imageSrc = b64).then( b64 => {
-    imgEl.src = imageSrc;
+    aTag.href = imageSrc;
     return b64;
+  } ).then( b64 => {
+    aTag.click();
+    aTag.remove();  
   } );
+
+  // mergeImages([
+  //   { src: 'bg.png', x: 0, y: 0 },
+  //   { src: imgURL, x: 1200, y: 2150 },
+  // ], {nameText: textInput}).then(b64 => imageSrc = b64).then( b64 => {
+  //   imgEl.src = imageSrc;
+  //   return b64;
+  // } );
 }
 
