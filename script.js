@@ -1,9 +1,16 @@
 async function loadFonts() {
-  const font = new FontFace("baloo", "url(BalooBhai2-Medium.ttf)", {
+  // const font = new FontFace("baloo", "url(BalooBhai2-Medium.ttf)", {
+  //   style: "normal",
+  //   weight: "400",
+  //   stretch: "condensed",
+  // });
+  
+  const font = new FontFace("baloo", "url(NotoSerifGujarati-Bold.ttf)", {
     style: "normal",
     weight: "400",
     stretch: "condensed",
   });
+  
   // wait for font to be loaded
   await font.load();
   // add font to document

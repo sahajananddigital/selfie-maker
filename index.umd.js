@@ -78,12 +78,13 @@
 						});
 					}
 
-					ctx.font = "80px baloo";
-					// ctx.fillStyle = "white";
+					ctx.font = "85px baloo";
+					ctx.fillStyle = "#990a17";
 					var textString = options.nameText,
 					textWidth = ctx.measureText(textString).width;
 					// ctx.fillText(textString , (canvas.width/2) - (textWidth / 2), 450);
-					ctx.fillText(textString , 1350 - (textWidth / 2) , 2890);
+					ctx.textAlign = "end";
+					ctx.fillText(textString , 1750 , 2925);
 					// Resolve all other data URIs sync
 					return canvas.toDataURL(options.format, options.quality);
 				}));
