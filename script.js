@@ -56,7 +56,7 @@ function mergeSelfie(imgURL, textInput){
   var imageSrc = '';
   var aTag = document.createElement('a');
   $('form').append(aTag);
-  aTag.download = "mobile.png";
+  aTag.download = "mobile.jpg";
 
   mergeImages([
     { src: 'white.png', x: 1000, y: 2000 },
